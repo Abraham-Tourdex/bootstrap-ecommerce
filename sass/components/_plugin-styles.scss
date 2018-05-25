@@ -1,0 +1,28 @@
+///// left and right button arrangment
+.owl-prev, .owl-next {
+    z-index: 9;
+    top:50%; 
+    transform:translateY(-50%); 
+    position: absolute;
+}
+
+.owl-prev{left:-30px; content:"<";} 
+.owl-next{right:-30px; content:">";}
+
+/* slider main */
+.slider-main{
+    .owl-prev, .owl-next {padding:18px 7px; color: #FFF;  background-color:rgba(0,0,0,.4);} 
+    .owl-nav [class*='owl-']:hover { background: #869791;  color: #FFF;  } 
+    .owl-prev{left:0; }
+    .owl-next{right:0;}
+    .item-slide{       
+        height:325px;  
+        img{ min-width:100%; min-height:100%; object-fit:cover; }
+    }
+}
+
+/* slide items  */
+.slide-items{
+    .owl-prev, .owl-next{top:42%; }
+}
+

@@ -1,0 +1,20 @@
+.menu-category{ margin:0; padding:0;
+	li{ position: relative; display: block; border-bottom: 1px solid $border;}
+
+	> li > a {	display: block; padding: 10px 15px;	} 
+
+	.submenu{  display:none; margin:0; padding:0; box-shadow:5px 5px 15px rgba(#000, .2);
+		z-index:20;  position:absolute; 
+		li { list-style:none; }
+		left: 100%; top:0; width:250px;  background: #fff; 
+		li a{ padding:7px 15px; display: block;}
+	}
+
+	li:hover{
+		background:$bg; transition: all 0.3s;
+	}
+	li:hover .submenu{
+		display:block; margin-left:0px; 
+	}
+
+} //.menu-side
