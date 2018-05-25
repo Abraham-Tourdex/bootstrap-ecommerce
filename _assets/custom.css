@@ -1,0 +1,33 @@
+.bg-purple{ background-color: #563d7c }
+.doc-page-header{background-color: #563d7c; min-height:50px;  position: sticky;top: 0;z-index: 1040; }
+
+.btn-purple{background-color: #563d7c; color:#fff;}
+.btn-purple:hover{background-color: #654598; color:#fff;}
+.logo{height: 36px; width:auto;}
+
+.purple, .color-purple{color:#7952b3;}
+
+.list-features{
+  line-height: 2; list-style: none 
+}
+
+.list-features li{
+  margin:25px; text-indent:7px;
+}
+.list-features li:before{
+   content: "\25CF"; font-size: 20px;
+   color: #7952b3;
+}
+
+.iconbox-file{
+  text-align:center;
+}
+.iconbox-file .title{
+  margin-bottom:0px;
+}
+.iconbox-file img{ height:36px; width: auto;
+  opacity:.6; margin-bottom:7px;
+}
+
+.card-showcase{margin-bottom:2rem; box-shadow:0 3px 7px rgba(20, 20, 20, .1);}
+.card-showcase .img-wrap{height:250px; cursor: zoom-in; border-bottom:1px solid #ddd;}
