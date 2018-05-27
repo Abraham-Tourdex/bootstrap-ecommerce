@@ -1,0 +1,32 @@
+
+section[class*='section']{background-attachment: fixed;}
+
+
+.bg-white{background-color:#fff!important}
+
+.bg-white-50{background-color:rgba(#fff,.5)}
+.bg-dark-50{background-color:rgba(#000,.5)}
+
+.bg-grad-primary{@include diagonalGradient($primary-dark, $primary-light);}
+
+.bg{background-color:$bg!important;}
+.bg2{background-color:$bg-dark!important;}
+.bg-purple {   background-color: $purple;}
+.bg-orange {   background-color: $orange;}
+.bg-green {   background-color: $green;}
+.bg-blue {   background-color: $blue;}
+
+.bg-pattern{
+	background-image: url(../images/bg/bg-pattern.svg), -webkit-linear-gradient(315deg, $primary, $primary-dark);
+    background-image: url(../images/bg/bg-pattern.svg), linear-gradient(135deg, $primary, $primary-dark);
+    background-size: cover, auto;
+    background-repeat: no-repeat, repeat;
+    background-position: 0px 0px, 50% 50%;
+}
+
+.overlay-grad {position:relative;
+    &:before{position:absolute; content:""; display:block; top:0; left:0; right:0; bottom:0;
+        @include diagonalGradient($primary, $pink); opacity:.6; transition:.5s; 
+    }
+    &:hover:before{opacity:.9;}
+}

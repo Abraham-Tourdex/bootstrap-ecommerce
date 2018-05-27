@@ -1,9 +1,9 @@
-/* ==================== INCLUDE FONTS ======================= */
-@import url("../fonts/roboto/font.css");
 /* ========================
 UIkit bootstrap-ecommerce.com 
 ===================== */
 /* ================== BASIC STYLE  =================== */
+/* ==================== INCLUDE FONTS ======================= */
+@import url("../fonts/roboto/font.css");
 html {
   font-size: 15px; }
 
@@ -347,6 +347,9 @@ article:after,
   padding-left: 7px;
   padding-right: 7px; }
 
+select.form-control-lg:not([size]):not([multiple]) {
+  height: 2.875rem; }
+
 section[class*='section'] {
   background-attachment: fixed; }
 
@@ -512,17 +515,19 @@ section[class*='section'] {
   padding-bottom: 7px; }
 
 /* ================== header main ==================  */
-.brand-wrap {
-  padding: 15px 0; }
-  .brand-wrap .logo {
-    margin-right: 7px;
-    height: 45px;
-    display: inline-block; }
-  .brand-wrap .logo-text {
-    margin: 0;
-    display: inline-block;
-    font-size: 22px;
-    vertical-align: middle; }
+.header-main {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+.brand-wrap .logo {
+  margin-right: 7px;
+  height: 45px;
+  display: inline-block; }
+.brand-wrap .logo-text {
+  margin: 0;
+  display: inline-block;
+  font-size: 22px;
+  vertical-align: middle; }
 
 .navbar-brand img {
   max-height: 32px; }

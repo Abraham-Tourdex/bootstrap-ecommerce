@@ -113,6 +113,7 @@ figure{margin-bottom:0}
 
 .form-noborder{
 	input, select, .btn {border:none}
+  select.form-control-lg:not([size]):not([multiple]){ height:2.875rem; }
 }
 
 /* all clearfix */

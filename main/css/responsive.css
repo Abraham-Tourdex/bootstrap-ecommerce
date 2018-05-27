@@ -18,6 +18,7 @@
 @media all and (max-width: 720px) {
   /* mobile devices */
   .navbar-landing {
+    -webkit-transition: .5s;
     transition: .5s;
     padding-top: 7px;
     padding-bottom: 7px; }
@@ -30,14 +31,12 @@
     margin-bottom: 5px;
     margin-top: 5px; }
 
-  .brand-wrap .logo {
+  .section-header .logo {
     max-height: 30px;
     width: auto; }
-  .brand-wrap .logo-text {
+  .section-header .logo-text {
     font-size: 24px; }
-
-  .col-nav {
-    max-width: 100%;
-    flex-basis: 100%; } }
+  .section-header .brand-wrap, .section-header .search-wrap, .section-header .widget-header {
+    margin-bottom: 1rem; } }
 
 /*# sourceMappingURL=responsive.css.map */
