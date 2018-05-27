@@ -18,6 +18,7 @@
 @media all and (max-width: 720px) {
   /* mobile devices */
   .navbar-landing {
+    -webkit-transition: .5s;
     transition: .5s;
     padding-top: 7px;
     padding-bottom: 7px; }
