@@ -29,5 +29,13 @@
   opacity:.6; margin-bottom:7px;
 }
 
-.card-showcase{margin-bottom:2rem; box-shadow:0 3px 7px rgba(20, 20, 20, .1);}
-.card-showcase .img-wrap{height:250px; cursor: zoom-in; border-bottom:1px solid #ddd;}
+.card-showcase{margin-bottom:2rem; box-shadow:0 2px 6px rgba(20, 20, 20, .1);}
+.card-showcase .img-wrap{height:300px; cursor: zoom-in; border-bottom:1px solid #ddd;}
+.card-showcase .title{ margin-bottom:15px; }
+
+
+@media all and (max-width:1024px) {   
+	/* mobile devices */
+	.card-showcase .img-wrap{height:200px; }
+
+}

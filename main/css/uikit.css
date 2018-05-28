@@ -316,6 +316,8 @@ figure {
 
 .form-noborder input, .form-noborder select, .form-noborder .btn {
   border: none; }
+.form-noborder select.form-control-lg:not([size]):not([multiple]) {
+  height: 2.875rem; }
 
 /* all clearfix */
 article:after,
@@ -346,9 +348,6 @@ article:after,
 .row-sm > [class^="col"] {
   padding-left: 7px;
   padding-right: 7px; }
-
-select.form-control-lg:not([size]):not([multiple]) {
-  height: 2.875rem; }
 
 section[class*='section'] {
   background-attachment: fixed; }

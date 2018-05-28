@@ -1,0 +1,37 @@
+@media (max-width: 1200px) {
+  /* tablet devices */ }
+@media (max-width: 960px) {
+  /* small tablet devices */
+  .slider-main .item-slide {
+    height: auto; }
+
+  .widget-header {
+    padding-bottom: 1rem; }
+
+  .navbar {
+    padding: 1rem; }
+
+  .submenu {
+    position: static !important;
+    width: 100%; } }
+@media all and (max-width: 720px) {
+  /* mobile devices */
+  .navbar-landing {
+    transition: .5s;
+    padding-top: 7px;
+    padding-bottom: 7px; }
+
+  .nav-item .btn {
+    margin: 7px 0 !important; }
+
+  .brand-wrap .logo {
+    max-height: 30px;
+    width: auto; }
+  .brand-wrap .logo-text {
+    font-size: 24px; }
+
+  .col-nav {
+    max-width: 100%;
+    flex-basis: 100%; } }
+
+/*# sourceMappingURL=responsive.css.map */

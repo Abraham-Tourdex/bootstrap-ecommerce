@@ -10,7 +10,7 @@
 	.slider-main{
 		.item-slide{height:auto}
 	}
-	.navbar{padding:1rem}
+	
 	.menu-category{
 		.submenu{max-width:100%; left:0; top:100%;}
 	}
@@ -23,6 +23,7 @@
 @media all and (max-width:720px) {   
 	/* mobile devices */
 
+	.navbar{padding:1rem}
 	// no sticky navbar on mobile
 	.navbar-landing{transition: .5s; padding-top:7px; padding-bottom:7px;}
 	.nav-item{
@@ -31,7 +32,7 @@
 
 	.list-inline-item{vertical-align:middle; margin-bottom:5px; margin-top:5px;}
 
-	.section-header{
+	.section-header, .header-main{
 		.logo{max-height:30px; width:auto}
    		.logo-text{font-size:24px;}
 		.brand-wrap, .search-wrap, .widget-header{margin-bottom:1rem;}
