@@ -1,9 +1,6 @@
 .card-product{ margin-bottom:1rem;
      &:after{content:"";  display:table; clear:both; visibility:hidden; }
     .price-wrap{ }
-    .price-new, .price{ margin-right:5px;  }
-    .price-old{color:#999; }
-   
     .img-wrap{ 
         border-radius:$radius-sm $radius-sm 0 0;
         overflow:hidden; 

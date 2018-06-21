@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="Bootstrap-ecommerce by Vosidiy">
-
-<title>Bootstrap Ecommerce templates. free html download</title>
+<meta name="description" content="Free ecommerce templates download, Bootstrap 4 e-ecommerce template html, best online shopping themes for web site">
+<meta name="keywords" content="e-commerce, bootstrap ecommerce, HTML, CSS, Bootstrap 4, framework, online shopping template">
+<title>Bootstrap Ecommerce templates. free e-commerce html template</title>
 
 <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
@@ -20,7 +21,6 @@
 <link href="main/fonts/fontawesome/css/fontawesome-all.min.css" type="text/css" rel="stylesheet">
 
 <!-- custom style -->
-<link href="main/css/uikit.css" rel="stylesheet" type="text/css"/>
 <link href="_assets/custom.css" rel="stylesheet" type="text/css"/>
 
 <script type="text/javascript">
@@ -29,7 +29,17 @@
 // jquery ready start
 $(document).ready(function() {
 	// jQuery code
-	
+	///////////////// fixed menu on scroll for desctop
+    if ($(window).width() > 768) {
+        
+        $(window).scroll(function(){  
+            if ($(this).scrollTop() > 125) {
+                 $('.header').addClass("scrolled");
+            }else{
+                $('.header').removeClass("scrolled");
+            }   
+        });
+    }
 	
 }); 
 // jquery end
@@ -38,34 +48,36 @@ $(document).ready(function() {
 </head>
 <body>
 <!-- ========================= SECTION HEADER ========================= -->
-<header id="page_header" class="doc-page-header">
+<header class="header navbar-sticky bg-white">
+	<nav class="navbar navbar-light  navbar-expand-md">
+<a class="navbar-brand" href="http://bootstrap-ecommerce.com"> 
+	<img src="main/images/logo.png" class="logo"> 
+	<div class="slogan slogan-dark">Bootstrap <br> Ecommerce UI</div>
+</a>
 
-<nav class="navbar  navbar-expand navbar-dark">
-	
-	<a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
-		<img src="main/images/logo-white.png" class="logo">
-	</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
 
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-	<span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarCollapse">
-	<ul class="navbar-nav">
-	  <li class="nav-item">
-	    <a class="nav-link" href="index.html"> Home </a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html"> Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="main/html-components.html">HTML components</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="design-components.html">Design blocks </a>
+      </li>
+      <li class="nav-item active">
+	    <a class="nav-link" href="templates.html">Templates</a>
 	  </li>
-	  <li class="nav-item">
-	    <a class="nav-link" href="main/html-components.html">Documentation</a>
-	  </li>
-	  <li class="nav-item active">
-	    <a class="nav-link" href="http://bootstrap-ecommerce.com/templates.html">Starter templates</a>
-	  </li>
-	</ul>
-	<ul class="navbar-nav ml-auto mr-3">
     	<li><a class="nav-link" href="#hireme" data-toggle="modal">Hire me</a></li>
     </ul>
-    <a class="btn btn-primary mt-2 mt-md-0" href="http://bootstrap-ecommerce.com/download.html">Download all</a>
-	</div>
+    <a class="btn btn-purple mt-2 mt-md-0 ml-md-3" href="http://bootstrap-ecommerce.com/download.html" data-toggle="tooltip" title="SketchApp Design & HTML Bootstrap version">Download all</a>
+ 
+  </div>
 </nav>
 </header>
 <!-- ========================= SECTION HEADER END // ========================= -->
@@ -75,12 +87,14 @@ $(document).ready(function() {
 <section class="section-content padding-y-lg bg">
 <div class="container">
 
-<h2 class="mb-5">Starter layout templates</h2>
-
+<header class="mb-5 text-center">
+	<h2>Starter kit for e-commerce projects</h2>
+	<p class="d-inline-block" style="width:70%">Following e-commerce templates made by our ui kit - based on Bootstrap 4. Download ui kit with all ecommerce templates.  Can be used for any ecommerce, online shopping web sites  and booking projects. <br> Create shopping website with Premium <a href="http://bootstrap-ecommerce.com" title="Download Bootstrap 4 ui kit">Bootstrap 4 ui kit</a></p>
+</header>
 <div class="row">
 <div class="col-md-4 col-sm-6">
-	<figure class="card card-showcase">
-	  <a href="main/index.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/index.jpg" alt="ecommerce HTML template design example"></a>
+	<figure class="card card-showcase showcase-lg">
+	  <a href="main/index.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/index.jpg" title="simple ecommerce HTML template" alt="simple ecommerce HTML template design example"></a>
 	  <figcaption class="card-body text-center">
 	  	<h5>Basic starter</h5>
 	  	<a href="main/index.html" target="_blank" class="btn btn-sm btn-primary"> View demo </a>
@@ -88,8 +102,8 @@ $(document).ready(function() {
 	</figure><!-- card // -->
 </div> <!-- col // -->
 <div class="col-md-4 col-sm-6">
-	<figure class="card card-showcase">
-	  <a href="main/starter-home-1.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/1.jpg" alt="ecommerce HTML template design example"></a>
+	<figure class="card card-showcase showcase-lg">
+	  <a href="main/starter-home-1.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/1.jpg" title="simple e-commerce template" alt="e-commerce template design"></a>
 	  <figcaption class="card-body text-center">
 	  	<h5>Simple blank</h5>
 	  	<a href="main/starter-home-1.html" target="_blank" class="btn btn-sm btn-primary"> View demo </a>
@@ -97,8 +111,8 @@ $(document).ready(function() {
 	</figure><!-- card // -->
 </div> <!-- col // -->
  <div class="col-md-4 col-sm-6">
- 	<figure class="card card-showcase">
-	  <a href="main/starter-home-2.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/2.jpg" alt="ecommerce HTML template design example"></a>
+ 	<figure class="card card-showcase showcase-lg">
+	  <a href="main/starter-home-2.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/2.jpg" alt="ecommerce HTML header template  example"></a>
 	  <figcaption class="card-body text-center">
 	  	<h5>Basic header</h5>
 	  	<a href="main/starter-home-2.html" target="_blank" class="btn btn-sm btn-primary"> View demo </a>
@@ -106,8 +120,8 @@ $(document).ready(function() {
 	</figure><!-- card // -->
 </div> <!-- col // -->
 <div class="col-md-4 col-sm-6">
-	<figure class="card card-showcase">
-	  <a href="main/starter-home-3.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/3.jpg" alt="ecommerce HTML template design example"></a>
+	<figure class="card card-showcase showcase-lg">
+	  <a href="main/starter-home-3.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/3.jpg" alt="ecommerce HTML menu design example"></a>
 	  <figcaption class="card-body text-center">
 	  	<h5>Sidebar menu</h5>
 	  	<a href="main/starter-home-3.html" target="_blank" class="btn btn-sm btn-primary"> View demo </a>
@@ -115,7 +129,7 @@ $(document).ready(function() {
 	</figure><!-- card // -->
 </div> <!-- col // -->
 <div class="col-md-4 col-sm-6">
-	<figure class="card card-showcase">
+	<figure class="card card-showcase showcase-lg">
 	  <a href="main/starter-home-4.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/4.jpg" alt="ecommerce HTML template design example"></a>
 	  <figcaption class="card-body text-center">
 	  	<h5>Compact header intro</h5>
@@ -124,7 +138,7 @@ $(document).ready(function() {
 	</figure><!-- card // -->
 </div> <!-- col // -->
 <div class="col-md-4 col-sm-6">
-	<figure class="card card-showcase">
+	<figure class="card card-showcase showcase-lg">
 	  <a href="main/starter-home-5.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/5.jpg" alt="ecommerce HTML template design example"></a>
 	  <figcaption class="card-body text-center">
 	  	<h5>Marketplace header</h5>
@@ -133,7 +147,7 @@ $(document).ready(function() {
 	</figure><!-- card // -->
 </div> <!-- col // -->
 <div class="col-md-4 col-sm-6">
-	<figure class="card card-showcase">
+	<figure class="card card-showcase showcase-lg">
 	  <a href="main/starter-home-6.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/6.jpg" alt="ecommerce HTML template design example"></a>
 	  <figcaption class="card-body text-center">
 	  	<h5>Booking header</h5>
@@ -142,8 +156,8 @@ $(document).ready(function() {
 	</figure><!-- card // -->
 </div> <!-- col // -->
 <div class="col-md-4 col-sm-6">
-	<figure class="card card-showcase">
-	  <a href="main/starter-page-listing.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/page-list.jpg" alt="ecommerce HTML template design example"></a>
+	<figure class="card card-showcase showcase-lg">
+	  <a href="main/starter-page-listing.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/page-list.jpg" alt="ecommerce HTML listing  design example"></a>
 	  <figcaption class="card-body text-center">
 	  	<h5>Basic listing</h5>
 	  	<a href="main/starter-page-listing.html" target="_blank" class="btn btn-sm btn-primary"> View demo </a>
@@ -151,7 +165,7 @@ $(document).ready(function() {
 	</figure><!-- card // -->
 </div> <!-- col // -->
 <div class="col-md-4 col-sm-6">
-	<figure class="card card-showcase">
+	<figure class="card card-showcase showcase-lg">
 	  <a href="main/starter-page-content.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/page-content.jpg" alt="ecommerce HTML template design example"></a>
 	  <figcaption class="card-body text-center">
 	  	<h5>Basic content</h5>
@@ -160,8 +174,8 @@ $(document).ready(function() {
 	</figure><!-- card // -->
 </div> <!-- col // -->
 <div class="col-md-4 col-sm-6">
-	<figure class="card card-showcase">
-	  <a href="main/starter-page-order.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/page-order.jpg" alt="ecommerce HTML template design example"></a>
+	<figure class="card card-showcase showcase-lg">
+	  <a href="main/starter-page-order.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/page-order.jpg" alt="ecommerce HTML shopping cart template  example"></a>
 	  <figcaption class="card-body text-center">
 	  	<h5>Basic shopping cart</h5>
 	  	<a href="main/starter-page-order.html" target="_blank" class="btn btn-sm btn-primary"> View demo </a>
@@ -170,8 +184,8 @@ $(document).ready(function() {
 </div> <!-- col // -->
 
 <div class="col-md-4 col-sm-6">
-	<figure class="card card-showcase">
-	  <a href="main/starter-landing.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/landing.jpg" alt="ecommerce HTML template design example"></a>
+	<figure class="card card-showcase showcase-lg">
+	  <a href="main/starter-landing.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/landing.jpg" alt="Product HTML landing page design example"></a>
 	  <figcaption class="card-body text-center">
 	  	<h5>Landing page starter</h5>
 	  	<a href="main/starter-landing.html" target="_blank" class="btn btn-sm btn-primary"> View demo </a>
@@ -179,7 +193,7 @@ $(document).ready(function() {
 	</figure><!-- card // -->
 </div> <!-- col // -->
 <div class="col-md-4  col-sm-6">
-	<figure class="card card-showcase">
+	<figure class="card card-showcase showcase-lg">
 	  <a href="main/example-sliders.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/sliders.jpg" alt="ecommerce HTML template design example"></a>
 	  <figcaption class="card-body text-center">
 	  	<h5 class="title text-truncate">Sliders example (Owl, Slick, Bootstrap4)</h5>
@@ -188,7 +202,7 @@ $(document).ready(function() {
 	</figure><!-- card // -->
 </div> <!-- col // -->
 <div class="col-md-4  col-sm-6">
-	<figure class="card card-showcase">
+	<figure class="card card-showcase showcase-lg">
 	  <a href="main/starter-alibaba-home.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/alibaba-home.jpg" alt="ecommerce HTML template design example"></a>
 	  <figcaption class="card-body text-center">
 	  	<h5 class="title text-truncate">Alibaba style homepage</h5>
@@ -197,11 +211,20 @@ $(document).ready(function() {
 	</figure><!-- card // -->
 </div> <!-- col // -->
 <div class="col-md-4 col-sm-6">
-	<figure class="card card-showcase">
-	  <a href="main/starter-alibaba-listing-grid.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/alibaba-list.jpg" alt="ecommerce HTML template design example"></a>
+	<figure class="card card-showcase showcase-lg">
+	  <a href="main/starter-alibaba-listing-grid.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/alibaba-list.jpg" title="marketplace HTML template example" alt="marketplace HTML template design example alibaba"></a>
 	  <figcaption class="card-body text-center">
 	  	<h5 class="title text-truncate">Alibaba style listing</h5>
 	  	<a href="main/starter-alibaba-listing-grid.html" target="_blank" class="btn btn-sm btn-primary"> View demo </a>
+	  </figcaption>
+	</figure><!-- card // -->
+</div> <!-- col // -->
+<div class="col-md-4 col-sm-6">
+	<figure class="card card-showcase showcase-lg">
+	  <a href="main/starter-alibaba-product-detail.html" target="_blank" class="img-wrap"><img class="card-img-top" src="_assets/screenshot/alibaba-detail.jpg" title="e-commerce product view design" alt="ecommerce product detail view page design"></a>
+	  <figcaption class="card-body text-center">
+	  	<h5 class="title text-truncate">Alibaba style detail view</h5>
+	  	<a href="main/starter-alibaba-product-detail.html" target="_blank" class="btn btn-sm btn-primary"> View demo </a>
 	  </figcaption>
 	</figure><!-- card // -->
 </div> <!-- col // -->
@@ -209,22 +232,45 @@ $(document).ready(function() {
 
 <hr>
 
-<h5 class="text-center">More starter layouts comping soon...</h5>
+<h5 class="text-center">More starter templates comping soon...</h5>
 
 </div><!-- container //  -->
 </section>
 <!-- ========================= SECTION CONTENT END// ========================= -->
 
 <!-- ========================= SECTION FOOTER ========================= -->
-<footer class="bg-purple white text-center border-top padding-y-sm" id="page_footer">
-	<div class="container-fluid">
-Copyright &copy 2018 <br>
+<footer class="bg-purple white text-center py-5" id="page_footer">
+	<div class="container">
+Made with <i class="fa fa-heart"></i> by <a class="text-light" href="mailto:vosidiy@gmail.com">Vosidiy M.</a> &nbsp  &copy 2018 <br>
 <a href="http://bootstrap-ecommerce.com" class="text-light">Bootstrap-ecommerce UI kit</a>
 	</div><!-- container //  -->
 </footer>
 <!-- ========================= SECTION FOOTER END // ========================= -->
 
 
+<!-- Modal -->
+<div class="modal fade" tabindex="-1" id="hireme" role="dialog">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Do you need help for...</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        &times
+        </button>
+      </div>
+      <div class="modal-body">
+<ul class="list-bullet">
+	<li>SketchApp, PSD design to HTML5/CSS3.</li>
+	<li>UI design of website or app</li>
+	<li>Customize this UI KIT for your project</li>
+</ul>
+<p>Portfolio: <a href="http://behance.com/vosidiy" target="_blank">Behance.com/vosidiy</a> <br> 
+Email me: <b>vosidiy@gmail.com</b> 
+</p>
+      </div>
+    </div>
+  </div>
+</div> <!-- modal.// -->
 
 
 

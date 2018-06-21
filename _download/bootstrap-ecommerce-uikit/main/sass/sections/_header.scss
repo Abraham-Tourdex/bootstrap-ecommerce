@@ -1,0 +1,31 @@
+.navbar-top{padding:0}
+
+.navbar-landing{transition: .5s; padding-top:15px; padding-bottom:15px;  position: fixed; top: 0; z-index: 100; width: 100%;}
+.navbar-landing.fixed-top{transition: .5s;  padding-top:7px; padding-bottom:7px; }
+
+/* ================== header main ==================  */
+.header-main{padding-top:1rem; padding-bottom:1rem;}
+.brand-wrap { 
+    .logo{margin-right:7px;  max-height:45px; display:inline-block}
+    .logo-text{margin:0; display:inline-block; font-size:22px; vertical-align:middle}
+}
+
+.header-main{position:relative;}
+
+.widget-header{ margin-left:7px; margin-right:7px; display:inline-block; position:relative;
+	form{min-width:280px;}
+	.title{display:block}
+	.notify{ position:absolute; top:-3px; right:-10px}
+}
+
+
+
+
+
+/* desktop only */
+@media all and (min-width: 768px) {
+
+
+
+}
+/* desktop only .end */

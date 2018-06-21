@@ -1,0 +1,133 @@
+.card{ 
+    .img-wrap{overflow:hidden; }
+}
+
+.icontext{
+    display: inline-flex; align-items: center;
+    .icon-wrap{position:relative;}
+    .text-wrap{line-height:1.2; padding-left:10px;}
+    small, .title{ display:block;} 
+}
+
+.price-new, .price{ margin-right:5px;  }
+.price-old{color:#999; }
+
+.notify{
+  position: absolute;
+  top: -4px;  right: -10px;
+  display: inline-block;
+  padding: .25em .6em;
+  font-size: 75%;  font-weight:600;  line-height: 1;  text-align: center;
+  border-radius: 3rem;  color: #fff;  background-color:$red;
+}
+
+.icon-action{margin-top:5px; float:right; font-size:80%}
+
+.list-group{
+  .list-group-item{padding-bottom:.5rem}
+  .title{margin-top:5px; margin-bottom:12px;}
+}
+
+
+.card-header{
+    .title{ margin-bottom:0; line-height:1.5}
+}
+
+.card-group-item{ border-bottom:1px solid $border;
+  .card-header{border-bottom:0;  background-color:#f9f9f9}
+  &:last-child{border-bottom:0}
+}
+
+
+/* ====================== shopping-cart ==================== */
+.shopping-cart-wrap{
+  img{max-width:100px;}
+  thead th{border-top:0; border-bottom:0}
+  .price{color:$primary; font-size:18px; font-weight:bold; margin-right:5px; display:block}
+}
+
+/* ====================== block ==================== */
+.box{
+  padding: 1rem 1.2rem;  display:block; background:#fff; 
+  border-radius:$radius-sm; box-shadow:0 1px 3px rgba(#333, .1); 
+}
+
+/* --------- media element --------*/
+.media{
+  .img-wrap{margin-right:1rem}
+}
+
+/* =================  ELEMENTS FOR PRODUCT =================== */
+
+.badge-new{
+    top: 7px;
+    left: 7px;
+    position: absolute; display:block; z-index: 10;
+    padding:2px 7px; font-size: 12px; background-color:#ef5f5f; color: #fff;
+    border-radius:4px;
+}
+.badge-offer {
+  display: block;  position: absolute;  top: 0px;  right: 15px;  z-index: 2; 
+   b {
+    background: #ef5f5f;
+    padding:4px;
+    font-family: 'Bebas';
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    font-size:16px;
+    display: inline-block;
+    height:36px;
+    width: 50px;
+    position: relative; }
+  b:after {
+    border-top: 7px solid #ef5f5f;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    content: "";
+    height: 0;
+    left: 0;
+    position: absolute;
+    top:36px;
+    width: 0; }
+}
+
+/* ================= RATINGS ============== */
+.label-rating{padding:0px 7px; color:#333; display:inline-block; vertical-align:middle}
+
+.stars-simple{margin-bottom:7px;
+    i {color:orange}
+    small{color:#999; margin-left:5px;}
+}
+
+/* rating-list */
+.rating-stars{display:inline-block; vertical-align:middle; list-style:none; margin:0; padding:0; position:relative; line-height:1;
+    white-space: nowrap; clear:both;
+    i{ font-size:14px; color:#ccc; display:inline;}
+    li{display:block;  text-overflow:clip;  white-space:nowrap; z-index:1; }
+  
+    li.stars-active{z-index:2; position:absolute; top:0; left:0; overflow: hidden;
+        i{color:orange;}
+    }
+}
+
+.divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    &:after{
+        content: "";
+        position: absolute;
+        width: 100%; border-bottom:1px solid #ddd;
+        top: 55%;
+        left: 0;
+        z-index: 1;
+    }
+    span{
+        background-color: #fff;
+        padding: 7px; font-size:12px;
+        position: relative;
+        z-index: 2;
+    }
+}

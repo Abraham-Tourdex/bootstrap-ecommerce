@@ -1,0 +1,21 @@
+.itembox{
+	.icon-wrap{margin-bottom:15px; margin-top:7px;}
+	img {max-width:100%}
+}
+
+.itemside { position:relative;   display: inline-flex; width:100%;
+	.text-wrap{padding-left:15px;  padding-right:7px; }
+	.img-wrap{position:relative; width:100px; height:100px; border-radius:$radius 0 0 $radius;}
+
+	img { object-fit: contain; }
+	p { margin-bottom: 0; }
+
+	.img-bg {object-fit:contain; position: absolute; right: 0; bottom:0; max-height:100px; bottom: 0; z-index: 0; }
+	.card-body{position:relative; z-index:3;}
+}
+
+
+.itemlist {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}

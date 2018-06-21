@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="Bootstrap-ecommerce by Vosidiy">
 
-<title>UI KIT - Marketplace and Ecommerce html template</title>
+<title>UI KIT - Bootstrap ecommerce product views html templates</title>
 
 <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 
@@ -162,15 +162,25 @@ $(document).ready(function() {
 	.intro{background-color:#563d7c;}
 	.inner-main{padding:45px;}
 
+	xmp{display: none}
 	code{padding:0;}
+	.fancybox-slide > *{max-width:80%;}
+	.img-logo{height: 36px; width:auto;}
+
 
 	@media (max-width: 768px) {		
 		.sidebar .btn-toggle{display:none!important;}
 		.sidebar .btn-collapse{display:block!important; }
+
+		.section-content {padding-left:0;}
+		.sidebar{display: none}
+		.inner-main { padding:15px;}
+		.navbar {  padding: 1rem;  overflow-x: auto; }
+		.nav-item{margin-right: 15px;}
 	}
 
-	.fancybox-slide > *{max-width:80%;}
-	.img-logo{height: 36px; width:auto;}
+	
+	
 </style>
 </head>
 <body>
@@ -2127,7 +2137,7 @@ tempor incididunt ut labore et dolore magna aliqua. </p>
 </h4>
 <div id="code_cart">
 <div class="card">
-<table class="table table-hover shopping-cart-wrap">
+<table class="table table-responsive table-hover shopping-cart-wrap">
 <thead class="text-muted">
 <tr>
   <th scope="col">Product</th>

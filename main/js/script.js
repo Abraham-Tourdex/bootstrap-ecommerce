@@ -59,9 +59,9 @@ $(document).ready(function() {
     }
 
 	/////////////////  items carousel. /plugins/owlcarousel/
-    if ($('.owl-carousel').length > 0) { // check if element exists
+    if ($('.owl-init').length > 0) { // check if element exists
 
-       $(".owl-carousel").each(function(){
+       $(".owl-init").each(function(){
             
             var myOwl = $(this);
             var data_items = myOwl.data('items');

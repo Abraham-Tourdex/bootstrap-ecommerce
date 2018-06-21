@@ -1,0 +1,69 @@
+.list-inline{margin-bottom:0;}
+/* --------- description list --------*/
+[class*="dlist-"]{
+  margin-bottom:5px;
+  dd{ margin-bottom:0}
+}
+
+.dlist-inline{  
+  dt, dd{ display:inline-block; }
+}
+
+.dlist-align{  
+  dt{  width: 90px; float: left; word-wrap: break-word;}
+  dd{ margin-left:120px; vertical-align: baseline; }
+}
+/* -------------------- list.row--------------------- */
+ul.row, ul.row-sm{ list-style:none; padding:0; margin-bottom:0; }
+
+/* ================= lists ================= */
+[class*="list-"] li:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  overflow: hidden; 
+  height: 0; clear: both;
+}
+
+.list-lg{
+  li{margin-bottom:10px;}
+}
+
+.list-icon { list-style:none; padding: 0;
+  li{margin-bottom:10px; }
+  img{ width:30px; vertical-align:middle; margin-right:15px;}
+  .icon{width:22px; margin-right:15px; vertical-align:middle; font-size:20px; text-align: center;}
+  span{ vertical-align:middle}
+}
+
+.list-bullet{list-style: none;  padding: 0;}
+.list-bullet li{margin-bottom:7px; position:relative; padding-left:15px;}
+.list-bullet li::before { 
+    content: " ";
+    position:absolute;  top:45%;  left:0;
+    width: 7px;
+    height: 7px;
+    margin: 0px 10px 0px 0px;
+    background:$accent;
+    border-radius:7px;
+}
+
+.list-dots{
+  > li{ list-style: none; position: relative;}
+  > li::before {
+    position:absolute; top:10px;
+    content: "\25CF"; // circle: • 
+    color: #ccc; 
+  }
+}
+
+.list-check{ list-style:none;  padding: 0;
+  li{margin-bottom:7px;  position:relative; padding-left:25px;}
+  li::before {
+      color:$accent;  position:absolute; top:0px; left:0;
+      font-family: "FontAwesome";
+      content: "\f00c"; font-size:16px;
+      display: inline-block;
+  }
+}
+

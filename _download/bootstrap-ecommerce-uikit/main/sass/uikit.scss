@@ -1,0 +1,38 @@
+
+/* ========================
+UIkit bootstrap-ecommerce.com 
+===================== */
+
+@import "variables-custom"; 
+@import "mixins";
+
+/* ================== BASIC STYLE  =================== */
+@import "base"; 
+
+/* ================== HELPERS  =================== */
+@import "helpers/helper-classes"; 
+@import "helpers/bg";
+@import "helpers/typography"; 
+
+/* ================== SECTIONS =================== */
+@import "sections/header";
+@import "sections/footer";
+@import "sections/sidebar";
+
+/* ================== PAGES =================== */
+@import "pages/page-home";
+@import "pages/page-common";
+@import "pages/page-detail";
+
+/* ================== COMPONENTS =================== */
+@import "components/plugin-styles";
+@import "components/buttons";
+@import "components/items";
+@import "components/lists";
+@import "components/cards-product";
+@import "components/elements.scss";
+@import "components/menu";
+
+
+
+

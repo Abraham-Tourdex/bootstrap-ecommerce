@@ -1,0 +1,145 @@
+a{
+    &:hover{ text-decoration: none;}
+}
+
+
+.img-wrap{text-align: center; display:block;
+    img{ max-width: 100%;}
+}
+.icon-wrap{text-align:center;}
+
+.zoom-in{transition: transform ease .3s;}
+.zoom-wrap:hover .zoom-in {
+    transform: scale(1.1); transition: transform ease .3s;
+}
+/* =================  DEFINED VARIABLES =================== */
+.icon-xs, .icon-sm, .icon-md, .icon-lg{display:inline-block; text-align:center}
+.icon-xs{ width:32px;  height:32px;  line-height:32px; font-size:16px; }
+.icon-sm{ width:42px;  height:42px;  line-height:42px; font-size:22px; }
+.icon-md{width:60px;  height:60px;  line-height:60px; font-size:32px; }
+.icon-lg{ width:80px;  height:80px;  line-height:80px; font-size:42px; }
+
+.img-xs, .img-sm, .img-md, .img-lg{object-fit:cover;}
+.img-xs{width:40px; max-height:40px; }
+.img-sm{width:80px; max-height:80px; }
+.img-md{width:160px; max-height:160px; }
+.img-lg{width:400px; max-height:300px; }
+
+
+.center-xy{  top:50%; left:50%; position:absolute; transform:translate(-50%, -50%); }
+.center-y{top: 50%; position: absolute; transform:translateY(-50%)}
+.center-x{left: 50%; position: absolute; transform:translateX(-50%)}
+
+.center{margin-left:auto; margin-right:auto;}
+.overflow-h{overflow:hidden}
+.flip-h{ transform: scaleX(-1);}
+
+.card-body-lg{padding:2rem;}
+
+
+.shadow-in{box-shadow:inset 0 2px 4px rgba(#333, .4)}
+
+.vh-100{height:100vh}
+.vh-90{height:90vh}
+.vh-80{height:80vh}
+.vh-70{height:70vh}
+.vh-60{height:60vh}
+.vh-50{height:50vh}
+
+[class*="hover-"]{transition:.5s;}
+.hover-shadow:hover{box-shadow:0 4px 15px rgba(#333, .5); transition:.5s;   }
+.hover-bg:hover{ @include diagonalGradient($primary, $primary);  transition:.5s; }
+.hover-zoom:hover{
+    transition:.5s; 
+    transform: scaleX(1);
+}
+
+/* ========== input with icon ==========  */
+.input-icon{position:relative; 
+  i + input, i + select{padding-left:36px;}
+  i{ position:absolute; color:#ccc; z-index:9;
+    left: 7px; top: 4px; width: 24px;
+    text-align: center;
+    padding:7px 0;
+  }
+}
+
+.list-inline-item{vertical-align:middle}
+
+.form-inline{
+  .form-control-sm[type="number"]{max-width:100px}
+}
+/* ========== borders ========== */
+.border{border:1px solid $border;}
+.border-left-white{border-left:1px solid rgba(#fff, .3);}
+.border-right-white{border-right:1px solid rgba(#fff, .3); }
+.border-top-white{border-top:1px solid rgba(#fff, .3);}
+.border-bottom-white{border-bottom:1px solid rgba(#fff, .3);}
+
+.circle{border-radius: 100%;}
+.round{border-radius:200px;}
+
+
+
+/* ============== spacing ============== */
+.padding-y{padding-top:32px; padding-bottom:32px;}
+.padding-top{padding-top:32px;}
+.padding-bottom{padding-bottom:32px;}
+
+.padding-y-lg{padding-top:60px;  padding-bottom:50px;}
+.padding-top-lg{padding-top:60px;}
+.padding-bottom-lg{padding-bottom:60px;}
+
+.padding-y-sm{padding-top:16px; padding-bottom:16px;}
+.padding-top-sm{padding-top:16px;}
+.padding-bottom-sm{padding-bottom:16px;}
+
+.nopadding{padding:0px;} .p0{padding:0px;} .p5{padding:5px;} .p7{padding:7px;}  .p10{padding:10px;} 
+.p15{padding:15px;} .p20{padding:20px;} .p30{padding:30px;} .p40{padding:40px;} .p50{padding:50px;} 
+.p60{padding:60px;} 
+
+.nomargin{margin:0px;} .m0{margin:0px;}  .m5{margin:5px;} .m7{margin:7px;}  .m10{margin:10px;} 
+.m15{margin:15px;} .m30{margin:30px;} .m40{margin:40px;} .m50{margin:50px;} 
+.m60{margin:60px;}
+
+
+
+.relative{position:relative}
+.absolute{position:absolute}
+
+var{font-style:normal;}
+figure{margin-bottom:0}
+
+
+.form-noborder{
+	input, select, .btn {border:none}
+  select.form-control-lg:not([size]):not([multiple]){ height:2.875rem; }
+}
+
+/* all clearfix */
+article:after,
+.form-group:after
+ {
+	display: block;
+  clear: both;
+  content: "";
+}
+
+.border-cols:not(:last-child){ border-bottom:1px solid $border;}
+.border-cols > [class*="col-"] {
+    overflow: hidden;
+    border-color: $border;
+    border-width: 0 0 0 1px;
+    border-style: solid; 
+}
+
+/* -------------------- small grid gutter --------------------- */
+.row-sm {  
+margin-right: -7px;  margin-left: -7px;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+}
+.row-sm > [class^="col"] {  padding-left:7px;  padding-right:7px;}
+
