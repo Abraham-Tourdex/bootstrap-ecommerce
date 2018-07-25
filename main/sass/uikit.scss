@@ -3,16 +3,16 @@
 UIkit bootstrap-ecommerce.com 
 ===================== */
 
-@import "variables-custom"; 
-@import "mixins";
+@import "variables"; 
+@import "helpers/mixins";
 
-/* ================== BASIC STYLE  =================== */
-@import "base"; 
 
 /* ================== HELPERS  =================== */
+@import "helpers/base"; 
 @import "helpers/helper-classes"; 
 @import "helpers/bg";
 @import "helpers/typography"; 
+@import "helpers/grid-24";
 
 /* ================== SECTIONS =================== */
 @import "sections/header";

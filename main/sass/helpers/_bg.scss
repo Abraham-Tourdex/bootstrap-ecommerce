@@ -1,6 +1,4 @@
 
-section[class*='section']{background-attachment: fixed;}
-
 
 .bg-white{background-color:#fff!important}
 
@@ -17,11 +15,19 @@ section[class*='section']{background-attachment: fixed;}
 .bg-blue {   background-color: $blue;}
 
 .bg-pattern{
-	background-image: url(../images/bg/bg-pattern.svg), -webkit-linear-gradient(315deg, $primary, $primary-dark);
-    background-image: url(../images/bg/bg-pattern.svg), linear-gradient(135deg, $primary, $primary-dark);
+	background-image: url(../images/banners/bg-pattern.svg), -webkit-linear-gradient(315deg, $primary, $primary-dark);
+    background-image: url(../images/banners/bg-pattern.svg), linear-gradient(135deg, $primary, $primary-dark);
     background-size: cover, auto;
     background-repeat: no-repeat, repeat;
     background-position: 0px 0px, 50% 50%;
+}
+
+.bg-img{ overflow: hidden;
+  background-color:#ddd;
+  background-image: -webkit-linear-gradient(315deg, rgba($primary-light, .8), rgba($primary-dark, .9)), url("../images/banners/bg-cpu.jpg");
+  background-image: linear-gradient(135deg, rgba($primary-light, .8), rgba($primary-dark, .9)), url("../images/banners/bg-cpu.jpg");
+  background-position: 0px 0px, 50% 50%;
+  background-size: auto, cover;
 }
 
 .overlay-grad {position:relative;

@@ -33,7 +33,7 @@
     .title{ margin-bottom:0; line-height:1.5}
 }
 
-.card-group-item{ border-bottom:1px solid $border;
+.card-group-item{ border-bottom:1px solid $border-color;
   .card-header{border-bottom:0;  background-color:#f9f9f9}
   &:last-child{border-bottom:0}
 }
@@ -93,7 +93,7 @@
 }
 
 /* ================= RATINGS ============== */
-.label-rating{padding:0px 7px; color:#333; display:inline-block; vertical-align:middle}
+.label-rating{margin-right:10px; display:inline-block; vertical-align:middle}
 
 .stars-simple{margin-bottom:7px;
     i {color:orange}
@@ -101,7 +101,7 @@
 }
 
 /* rating-list */
-.rating-stars{display:inline-block; vertical-align:middle; list-style:none; margin:0; padding:0; position:relative; line-height:1;
+.rating-stars{margin-right:10px; display:inline-block; vertical-align:middle; list-style:none; margin:0; padding:0; position:relative; line-height:1;
     white-space: nowrap; clear:both;
     i{ font-size:14px; color:#ccc; display:inline;}
     li{display:block;  text-overflow:clip;  white-space:nowrap; z-index:1; }

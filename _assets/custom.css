@@ -96,7 +96,7 @@ body{overflow-x: hidden;}
 
 .card-showcase{margin-bottom:2rem; }
 .card-showcase .img-wrap{height:200px; cursor: zoom-in; overflow: hidden; border-bottom:1px solid #ddd; position: relative;}
-.card-showcase .title{ margin-bottom:0; font-size:14px; text-decoration: none }
+.card-showcase .title{ margin-bottom:0; text-decoration: none }
 .showcase-lg .img-wrap{height:250px;}
 .btn-overlay{display: none;  position: absolute; bottom: 0; width:100%; padding:5px; text-align: center; background:var(--blue); color:#fff; text-decoration: none; }
 .card-showcase:hover .btn-overlay{ display:block; color:#fff; text-decoration: none  }
@@ -112,12 +112,24 @@ body{overflow-x: hidden;}
 
 }
 
-@media all and (min-width:1025px) {   
+@media  (min-width:1025px) {   
   /* desktop devices */
  .navbar-sticky{position: sticky;top: 0; z-index: 1040; }
  .navbar-fixed{position: fixed; top: 0; right:0; left:0; z-index: 1040; }
 
 }
+
+@media (min-width:1500px) {   
+  /* large desktop devices */
+	 .intro-bg-shape {
+	    position: absolute;
+	    width: 1200px;
+	    height: 1200px;
+	}
+}
+
+
+
 
 .itembox{padding:30px 10px;}
 .itembox p{margin-bottom:0;}

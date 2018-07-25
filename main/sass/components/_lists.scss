@@ -1,4 +1,7 @@
 .list-inline{margin-bottom:0;}
+
+.list-inline-item{vertical-align:middle}
+
 /* --------- description list --------*/
 [class*="dlist-"]{
   margin-bottom:5px;
@@ -61,8 +64,12 @@ ul.row, ul.row-sm{ list-style:none; padding:0; margin-bottom:0; }
   li{margin-bottom:7px;  position:relative; padding-left:25px;}
   li::before {
       color:$accent;  position:absolute; top:0px; left:0;
-      font-family: "FontAwesome";
+      font-family: "Font Awesome 5 Free";
       content: "\f00c"; font-size:16px;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
       display: inline-block;
   }
 }

@@ -5,15 +5,20 @@
 
 .itemside { position:relative;   display: inline-flex; width:100%;
 	.text-wrap{padding-left:15px;  padding-right:7px; }
-	.img-wrap{position:relative; width:100px; height:100px; border-radius:$radius 0 0 $radius;}
+	.img-wrap{position:relative; max-width:100px; max-height:100px; border-radius:$radius 0 0 $radius;}
 
 	img { object-fit: contain; }
-	p { margin-bottom: 0; }
+	p, .title { margin-bottom: 0.5rem; }
 
 	.img-bg {object-fit:contain; position: absolute; right: 0; bottom:0; max-height:100px; bottom: 0; z-index: 0; }
 	.card-body{position:relative; z-index:3;}
 }
 
+.items-bordered-wrap{
+	.itemside:not(:last-child){
+		border-bottom:1px solid $border-color; padding-bottom:10px; margin-bottom:10px;
+	}
+}
 
 .itemlist {
     padding: 20px;

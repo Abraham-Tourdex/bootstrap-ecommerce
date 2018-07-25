@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>💟icons/wifi</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M1.81666667,11.6046496 L4.39545455,14.1834375 C10.8037424,7.77514962 21.1962576,7.77514962 27.6045455,14.1834375 L30.1833333,11.6046496 C22.3567121,3.77802841 9.65618182,3.77802841 1.81666667,11.6046496 L1.81666667,11.6046496 Z M12.1318182,21.9198011 L16,25.787983 L19.8681818,21.9198011 C17.7406818,19.7794072 14.2722121,19.7794072 12.1318182,21.9198011 L12.1318182,21.9198011 Z M6.97424242,16.7622254 L9.5530303,19.3410133 C13.1117576,15.782286 18.8882424,15.782286 22.4469697,19.3410133 L25.0257576,16.7622254 C20.048697,11.7851648 11.964197,11.7851648 6.97424242,16.7622254 L6.97424242,16.7622254 Z" id="path-1"></path>
+    </defs>
+    <g id="💟icons/wifi" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Icon" fill="#8F8E94" xlink:href="#path-1"></use>
+    </g>
+</svg>

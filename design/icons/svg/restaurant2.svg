@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>💟icons/restaurant2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M14.6333333,11.9 L11.9,11.9 L11.9,2.33333333 L9.16666667,2.33333333 L9.16666667,11.9 L6.43333333,11.9 L6.43333333,2.33333333 L3.7,2.33333333 L3.7,11.9 C3.7,14.7973333 5.96866667,17.148 8.825,17.3256667 L8.825,29.6666667 L12.2416667,29.6666667 L12.2416667,17.3256667 C15.098,17.148 17.3666667,14.7973333 17.3666667,11.9 L17.3666667,2.33333333 L14.6333333,2.33333333 L14.6333333,11.9 L14.6333333,11.9 Z M21.4666667,7.8 L21.4666667,18.7333333 L24.8833333,18.7333333 L24.8833333,29.6666667 L28.3,29.6666667 L28.3,2.33333333 C24.528,2.33333333 21.4666667,5.39466667 21.4666667,7.8 L21.4666667,7.8 Z" id="path-1"></path>
+    </defs>
+    <g id="💟icons/restaurant2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Icon" fill="#8F8E94" xlink:href="#path-1"></use>
+    </g>
+</svg>

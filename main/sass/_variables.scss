@@ -1,0 +1,131 @@
+// UIKIT VARIABLES & 
+// BOOTSTRAP Override Variables
+
+
+@import "bootstrap-sass/functions";
+@import "bootstrap-sass/mixins"; 
+
+
+$primary:       #007bff;
+$primary-light: lighten($primary, 10%);
+$primary-dark:  darken($primary, 10%);
+
+$accent:#FE935F;  
+$accent-light:  lighten($accent, 10%);
+$accent-dark:   darken($accent, 10%);
+
+$bg: #f8f8f8;
+$bg-dark: #eceded;
+$border-color: #eee;
+$element:#86A9B5;
+
+$font-title: 'Roboto', sans-serif;
+
+
+$radius-sm:3px;
+$radius:5px;
+$radius-lg:7px;
+
+
+///////////////////////// BOOTSTRAP VARIABLES OVERRIDES
+// Also we can change bootstrap variables from here by copy/pasting variables from bootstrap-sass/variables.scss file
+
+// stylelint-disable
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+
+$primary:       $blue;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+
+
+$spacer: 1rem !default;
+
+// Fonts
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-base:            $font-family-sans-serif;
+// stylelint-enable value-keyword-case
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                ($font-size-base * 1.25) !default;
+$font-size-sm:                ($font-size-base * .875) !default;
+
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            600 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.5 !default;
+
+$small-font-size:             80% !default;
+$text-muted:                  $gray-600 !default;
+
+$headings-line-height:        1.4;
+
+
+$grid-gutter-width:           30px;
+$container-max-widths: (
+  xl: 1280px
+);
+
+
+// list inline
+$list-inline-padding:         1.5rem;
+
+// Breadcrumbs
+$breadcrumb-padding-y:              0;
+$breadcrumb-padding-x:              0;
+$breadcrumb-item-padding:           .5rem !default;
+$breadcrumb-margin-bottom:          0;
+$breadcrumb-bg:                     transparent;
+$breadcrumb-divider:                quote("\00BB") !default;
+
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
+$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
+$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
+
+// Navbar
+$navbar-padding-y:     ($spacer / 2);
+$navbar-padding-x:     $spacer;
+
+// Breadcrumbs
+$breadcrumb-margin-bottom:          0;
+$breadcrumb-bg:                     $gray-200 !default;
+
+
+// Navs
+$navbar-padding-y:                  ($spacer / 2) !default;
+$navbar-padding-x:                  $spacer !default;
+$navbar-nav-link-padding-x:         1rem !default;
+// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
+$navbar-brand-padding-y:            0;
+
+$input-btn-padding-y-sm:      .15rem;

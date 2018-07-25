@@ -5,8 +5,8 @@
 
 /* ================== header main ==================  */
 .header-main{padding-top:1rem; padding-bottom:1rem;}
-.brand-wrap { 
-    .logo{margin-right:7px;  max-height:45px; display:inline-block}
+.brand-wrap, .navbar-brand { 
+    .logo{margin-right:7px;  max-height:42px; display:inline-block; }
     .logo-text{margin:0; display:inline-block; font-size:22px; vertical-align:middle}
 }
 

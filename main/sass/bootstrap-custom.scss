@@ -2,8 +2,7 @@
 /* ========================
 Bootstrap with custom variables
 =================== */
-@import "variables-custom";
+// We'll include bootstrap variables to override bootstrap variables,
+@import "variables"; 
 
-@import "bootstrap-sass/bootstrap";
-
-@import "bootstrap-grid-24";
+@import "bootstrap-sass/bootstrap";  

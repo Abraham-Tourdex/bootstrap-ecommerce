@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>💟icons/desktop_windows</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M27.4545455,4 L4.54545455,4 C3.14545455,4 2,5.125 2,6.5 L2,21.5 C2,22.875 3.14545455,24 4.54545455,24 L13.4545455,24 L13.4545455,26.5 L10.9090909,26.5 L10.9090909,29 L21.0909091,29 L21.0909091,26.5 L18.5454545,26.5 L18.5454545,24 L27.4545455,24 C28.8545455,24 30,22.875 30,21.5 L30,6.5 C30,5.125 28.8545455,4 27.4545455,4 L27.4545455,4 Z M28,21 L5,21 L5,6 L28,6 L28,21 L28,21 Z" id="path-1"></path>
+    </defs>
+    <g id="💟icons/desktop_windows" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Icon" fill="#8F8E94" xlink:href="#path-1"></use>
+    </g>
+</svg>

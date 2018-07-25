@@ -50,10 +50,9 @@ function copyToClipboard(element) {
 $(document).ready(function() {
 	// jQuery code
 	
-
 	// show code script 
-	/*
-		$('code').each(function() {
+
+		$('.code').each(function() {
 		  var that = $(this);
 		  // cache the content of 'code'
 		  var html = that.html().trim();
@@ -61,7 +60,7 @@ $(document).ready(function() {
 		  // escape the content
 		  that.text(html);
 		});
-	*/
+
 	
 	$('.showcode').click(function(e){
 		e.preventDefault();
@@ -85,16 +84,9 @@ $(document).ready(function() {
 
 	////////////////////////  Highlight the top nav as scrolling occurs. /bootstrap/
 	$('body').scrollspy({ 
-        target: '.nav-sidebar',
+        target: '#list-example',
         offset: 80
     });
-
-	$('.btn-toggle').click(function(){
-		$('body').toggleClass('push-side');
-	});
-	$('.btn-collapse').click(function(){
-		$('.doc-menu').slideToggle();
-	});
 
 	
 }); 
@@ -106,52 +98,29 @@ $(document).ready(function() {
 	pre{
 		max-height: 30rem;
 		overflow: auto;
+		width:100%;
+		white-space: pre-wrap; 
+	    white-space:pre-line;
 	}
-	.section-content{padding-left: 12rem;
-		transition-property: padding-left;
-		transition-timing-function: ease;
-		transition-delay: 0s;
-		transition-duration: .5s;
-	}
-	body.push-side .section-content{padding-left: 0rem;}
-	.doc-page-header{background-color: #563d7c; min-height:50px;  position: sticky;top: 0;z-index:990; }
 	
-	.push-side .sidebar{
-		right: auto;
-		left:-12rem;
-	}
+	.slogan{display: inline-block; vertical-align: middle; font-size: 14px; line-height: 1.2;}
+	.logo{display: inline-block; vertical-align: middle; margin-right: 7px;}
+	.btn-purple{background-color: #5D3C90; color:#fff;}
+	.btn-purple:hover{background-color: #654598; color:#fff;}
 
-	.doc-nav-wrap .btn{background-color:transparent; 
-		position: absolute; top:12px; right:10px; color:orange; z-index: 99;
-	}
-	.sidebar .btn-collapse{display:none; }
-	.push-side .sidebar .btn-toggle{ right: -38px;
-		background-color: orange;
-		color: #fff; 
-	}
-	
-	.sidebar{ box-shadow: 0 0 15px #e4e4e4;
-		position: fixed;
-		left: 0; right: auto;
-		height: 100%; z-index: 99;
-		width: 12rem;
-		transition-property: all;
-		transition-timing-function: ease;
-		transition-delay: 0s;
-		transition-duration: .5s;
-		background-color: #fff;
-		border-right: 1px solid #ddd;
-	}
+	/* body{padding-top: 4.5rem; } */
 
-	
-	.header-aside{ position: relative;
-		padding:18px 12px;
-		height:60px; color: #563d7c;
-		border-bottom: 1px solid #eee;
+	.aside-header{ height: 53px; background: var(--purple); padding:7px 15px; color:#fff; }
+	.aside-header .title{ line-height: 1.2 }
+	.menu-aside{list-style: none;	padding: 0; margin-top:7px;}
+	.menu-aside li a{padding:10px 15px; display:block; color:#333; }
+	.menu-aside li a.active{ color:var(--blue); font-weight: 500 }
+	.menu-aside li a:hover{background-color:#f2f2f2; }
+
+	.main-content{ padding:15px; margin-left:auto; margin-right: auto }
+	.aside-content{
+		overflow-y: auto; height:100%; background: #fff;
 	}
-	.doc-menu{list-style: none;	font-size:13px; padding: 0; margin-top:7px;	}
-	.doc-menu li a{padding:10px 15px; display:block; color:#333; }
-	.doc-menu li a:hover{background-color:#eee; color:#666;}
 
 	.title-doc{font-size:36px; margin-top:60px; font-weight: 300;  margin-bottom:0;}
 	.subtitle-doc{font-size:13px; color:#999; font-weight:400; display: inline-block; padding-bottom:5px; text-transform: uppercase; margin-bottom:25px; margin-top:45px; }
@@ -159,95 +128,114 @@ $(document).ready(function() {
 	.subtitle-doc a:hover{color:blue;}
 	.btn-getcode{padding:3px 7px; font-size: 12px; background-color:orange; color:#fff; float:right;}
 
-	.intro{background-color:#563d7c;}
-	.inner-main{padding:45px;}
-
-	xmp{display: none}
-	code{padding:0;}
-	.fancybox-slide > *{max-width:80%;}
-	.img-logo{height: 36px; width:auto;}
-
-
-	@media (max-width: 768px) {		
-		.sidebar .btn-toggle{display:none!important;}
-		.sidebar .btn-collapse{display:block!important; }
-
-		.section-content {padding-left:0;}
-		.sidebar{display: none}
-		.inner-main { padding:15px;}
-		.navbar {  padding: 1rem;  overflow-x: auto; }
-		.nav-item{margin-right: 15px;}
+	.aside-wrap{
+		background-color:#fff;
+        border-right: 1px solid rgba(0,0,0,.05);
 	}
+	@media (min-width:768px) {
+		.aside-content{
+			display: block!important;
+		}
+		
+        .aside-wrap{
+            position:-webkit-sticky;
+            position:sticky;
+			height: calc(100vh - 53px);
+			z-index: 1000;
+			top:0;
+	    }
 
+	    .main-content{ padding:60px; max-width: 1280px;  }
 	
-	
+	} 
+	/* media */
 </style>
 </head>
-<body>
-<!-- ========================= SECTION HEADER ========================= -->
-<header id="page_header" class="doc-page-header">
+<body class="bg">
 
-<nav class="navbar navbar-expand navbar-dark">
-	<a href="index.html" class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
-		<img src="images/logo-white.png" class="img-logo">
-	</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-	    <span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarCollapse">
-		<ul class="navbar-nav">
-		  <li class="nav-item">
-		    <a class="nav-link" href="../index.html"> Home </a>
-		  </li>
-		  <li class="nav-item active">
-		    <a class="nav-link" href="../main/html-components.html">Documentation</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="http://bootstrap-ecommerce.com/templates.html">Starter templates</a>
-		  </li>
-		</ul>
-		<ul class="navbar-nav ml-auto mr-3">
-	    	<li><a class="nav-link" href="#hireme" data-toggle="modal">Hire me</a></li>
-	    </ul>
-	    <a class="btn btn-primary mt-2 mt-md-0" href="http://bootstrap-ecommerce.com/download.html">Download all</a>
-	</div>
+
+
+
+<div class="row no-gutters">
+<!-- ========================= SECTION CONTENT ========================= -->
+<aside class="aside-wrap col-md-3 col-lg-2">
+<header class="aside-header">
+	<a class="float-right d-md-none btn" type="button" data-toggle="collapse" data-target="#navbar_aside">
+      <i class="fa fa-bars white fa-lg"></i> &nbsp  Elements
+    </a>
+	<h6 class="title">Bootstrap-Ecommerce <br> <small>Documentation</small></h6>
+	
+</header>
+<div class="aside-content collapse" id="navbar_aside">
+<nav  class="menu-wrap">
+	<ul class="menu-aside">
+		<li> <a class="page-scroll nav-link" href="#start">Getting started</a> </li>
+		<li> <a class="page-scroll nav-link" href="#cards">Bootstrap cards</a> </li>
+		<li> <a class="page-scroll nav-link" href="#itemboxes">itemboxes</a> </li>
+		<li> <a class="page-scroll nav-link" href="#itemside">Itemside</a> </li>
+		<li> <a class="page-scroll nav-link" href="#products">Product cards</a> </li>
+		<li> <a class="page-scroll nav-link" href="#product_detail">Product detailed</a> </li>
+		<li> <a class="page-scroll nav-link" href="#collapses">Collapses</a> </li>
+		<li> <a class="page-scroll nav-link" href="#filter_elements">Filter elements</a> </li>
+		<li> <a class="page-scroll nav-link" href="#forms">Forms</a> </li>
+		<li> <a class="page-scroll nav-link" href="#order">Order</a> </li>
+		<li> <a class="page-scroll nav-link" href="#parameters">Parameters</a> </li>
+		<li> <a class="page-scroll nav-link" href="#list_styles">List style</a> </li>
+	</ul>
+</nav>
+<hr>
+<div class="aside-bottom p-3 text-center">
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<input type="hidden" name="hosted_button_id" value="L2B9M6JFF9C2J">
+	<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to donate online!">
+	<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+	</form>
+</div> <!-- aside-bottom.// -->
+
+</div><!--  aside-contant -->
+
+</aside>
+
+<main class="main-wrap col-md-9 col-lg-10">
+
+<!-- ========================= SECTION HEADER ========================= -->
+<header class="header shadow-sm  bg-white">
+	<nav class="navbar navbar-light  navbar-expand-md">
+<a href="http://bootstrap-ecommerce.com" class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+	<img src="images/logo.png" class="logo" height="36">
+	<div class="slogan">Bootstrap <br> Ecommerce UI</div>
+</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="../index.html"> Home </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="../main/html-components.html">HTML components</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://bootstrap-ecommerce.com/design.html">Design blocks </a>
+      </li>
+      <li class="nav-item">
+	    <a class="nav-link" href="http://bootstrap-ecommerce.com/templates.html">Templates</a>
+	  </li>
+    	<li><a class="nav-link" href="#hireme" data-toggle="modal">Hire me</a></li>
+    </ul>
+     <a class="btn btn-purple mt-2 mt-md-0 ml-md-3" href="http://bootstrap-ecommerce.com/download.html" data-toggle="tooltip" title="SketchApp Design & HTML Bootstrap version">Download all</a>
+  </div>
 </nav>
 </header>
-
 <!-- ========================= SECTION HEADER END // ========================= -->
 
-<!-- ========================= SECTION SIDEBAR ========================= -->
-<aside class="sidebar">
-	<nav class="doc-nav-wrap">
-	<div class="header-aside">
-		<button class="btn-toggle btn"><i class="fa fa-bars"></i></button>
-		<button class="btn-collapse btn"><i class="fa fa-bars"></i></button>
-		<h5 class="title-aside">Components</h5>
-	</div>
-	<ul class="doc-menu">
-	<li> <a class="page-scroll" href="#start">Getting started</a> </li>
-	<li> <a class="page-scroll" href="#cards">Bootstrap cards</a> </li>
-	<li> <a class="page-scroll" href="#itemboxes">itemboxes</a> </li>
-	<li> <a class="page-scroll" href="#itemside">Itemside</a> </li>
-	<li> <a class="page-scroll" href="#products">Product cards</a> </li>
-	<li> <a class="page-scroll" href="#product_detail">Product detailed</a> </li>
-	<li> <a class="page-scroll" href="#collapses">Collapses</a> </li>
-	<li> <a class="page-scroll" href="#filter_elements">Filter elements</a> </li>
-	<li> <a class="page-scroll" href="#forms">Forms</a> </li>
-	<li> <a class="page-scroll" href="#order">Order</a> </li>
-	<li> <a class="page-scroll" href="#parameters">Parameters</a> </li>
-	<li> <a class="page-scroll" href="#list_styles">List style</a> </li>
-</ul>
-	</nav>
-</aside>
-<!-- ========================= SECTION SIDEBAR END // ========================= -->
-
-
-<!-- ========================= SECTION CONTENT ========================= -->
-<section class="section-content bg">
-<div class="container-fluid"  style="max-width:1280px">
-
-<main class="inner-main">
+<div class="main-content">
+<!-- ============ main content inner start ============ -->
+ 
 
 <h1>Bootstrap ecommerce - UI KIT. </h1>
 <h3 class="text-muted">Ready to use HTML components based on Bootstrap 4</h3>
@@ -256,6 +244,15 @@ Speed up your workflow with  beautifully designed components and ready to use co
 </p>
 <section id="start">
 <h2 class="title-doc"># Getting Started</h2>
+<h3  class="subtitle-doc"># How to use</h3>
+<ol class="ml-3 p-0" style="max-width: 700px">
+	<li> Download zip file. <br> You will have 2 folders. One includes all design file on sketchApp file. Second folder called "main".  This folder is your front-end project folder which is included most used elements.  </li>
+	<li> if You are using sass compiler, then go to the folder /sass (inside main/). Feel free to edit any styles and then compile it. All compiled css files are in css/ folder</li>
+	<li> Check starter html files (For ex. starter-home-1.html )  And select any of them which is similar to your project and write your html code</li>
+	<li> If need some component visit html-components.html  (inside main/folder) and click the link above the each component to get the code. click "copy" to take html</li>
+	<li> Paste copied code into your project. </li>
+</ol>
+<p> </p>
 <h3  class="subtitle-doc"># Included files</h3>
 <p>All plugins and files are included in head part of document. Everything commented well. <br> All included plugins with its styling are inside the folder /plugins/ </p>
 <h3  class="subtitle-doc"># Style structure</h3>
@@ -273,14 +270,14 @@ Speed up your workflow with  beautifully designed components and ready to use co
 
 <p class="alert alert-warning">Note: I prefer Koala SASS compiler. it is easy for those people who doesn't like to work with black terminal screen. <a target="_blank" href="http://koala-app.com/">Check it here</a></p>
 <code>
-<xmp>
+<pre class="code">
 <!-- bootstrap4 -->
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
 <!-- custom styles -->
 <link href="css/uikit.css" rel="stylesheet" type="text/css"/>
 <link href="css/responsive.css" rel="stylesheet" media="only screen and (max-width: 1200px)" />
-</xmp>
+</pre>
 </code>
 
 </section>
@@ -291,7 +288,7 @@ Speed up your workflow with  beautifully designed components and ready to use co
 <div class="row">
 	<aside class="col-md-6">
 <h3  class="subtitle-doc"># Simple card 
-	<a href="#" data-html="code_simple_card" class="showcode">[code]</a></h3>
+	<a href="#"  data-html="code_simple_card" class="showcode">[code]</a></h3>
 
 <div id="code_simple_card">
 <div class="card">
@@ -686,6 +683,114 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </p>
 </div> <!-- row.// -->
 
 
+
+
+<div class="row">
+<aside class="col-md-4">
+<h3  class="subtitle-doc"># itemside image1
+	 <a href="#" data-html="code_itemside_img1" class="showcode">[code]</a>
+</h3>
+<div id="code_itemside_img1">
+<div class="box">
+	<figure class="itemside mb-3">
+		<div class="aside"><img src="images/items/1.jpg" class="img-sm border"> </div>
+		<figcaption class="text-wrap align-self-center">
+			<p class="title">Just name of title or name goes here</p>
+		</figcaption>
+	</figure>
+	<figure class="itemside mb-3">
+		<div class="aside"><img src="images/items/2.jpg" class="img-sm border"></div>
+		<figcaption class="text-wrap align-self-center">
+			<p class="title">The name of product or item could be here</p>
+		</figcaption>
+	</figure> 
+	<figure class="itemside">
+		<div class="aside"> <img src="images/items/3.jpg" class="img-sm border"> </div>
+		<figcaption class="text-wrap align-self-center">
+			<p class="title">Some name of item could be here, its simple</p>
+		</figcaption>
+	</figure> 
+</div> <!-- box.// -->
+</div> <!-- code-wrap.// -->
+</aside> <!-- col.// -->
+<aside class="col-md-4">
+<h3  class="subtitle-doc"># itemside image2
+	<a href="#" data-html="code_itemside_img2" class="showcode">[code]</a>
+</h3>
+<div id="code_itemside_img2">
+<div class="box items-bordered-wrap">
+	<figure class="itemside">
+		<div class="aside"><img src="images/items/4.jpg" class="img-sm"></div>
+		<figcaption class="text-wrap align-self-center">
+			<h6 class="title"><a href="#">Some name of item goes here nice</a></h6>
+			<div class="price-wrap">
+				<span class="price-new">$1280</span>
+				<del class="price-old text-muted">$1980</del>
+			</div> <!-- price-wrap.// -->
+		</figcaption>
+	</figure> 
+	<figure class="itemside">
+		<div class="aside"><img src="images/items/5.jpg" class="img-sm"></div>
+		<figcaption class="text-wrap align-self-center">
+			<h6 class="title"><a href="#">Some name of item goes here nice</a></h6>
+			<div class="price-wrap">
+				<span class="price-new">$1280</span>
+			</div> <!-- price-wrap.// -->
+		</figcaption>
+	</figure> 
+	<figure class="itemside">
+		<div class="aside"><img src="images/items/6.jpg" class="img-sm"></div>
+		<figcaption class="text-wrap align-self-center">
+			<h6 class="title"><a href="#">Some name of item goes here nice</a></h6>
+			<div class="price-wrap">
+				<span class="price-new">$1280</span>
+			</div> <!-- price-wrap.// -->
+		</figcaption>
+	</figure> 
+</div> <!-- box.// -->
+
+</div> <!-- code-wrap.// -->
+</aside> <!-- col.// -->
+<aside class="col-md-4">
+
+<h3  class="subtitle-doc"># itemside image3
+	<a href="#" data-html="code_itemside_img3" class="showcode">[code]</a>
+</h3>
+<div id="code_itemside_img3">
+
+<div class="box">
+	<figure class="itemside mb-3">
+		<div class="aside">	<img class="img-sm" width="80" width="80" src="images/items/7.jpg"> </div>
+		<figcaption class="text-wrap">
+			<p class="title">Just name of title or name goes here well</p>
+			<a href="#" class="btn btn-primary btn-sm"> Button </a>
+			<button class="btn btn-sm btn-warning" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+		</figcaption>
+	</figure>  <!-- itemside.// -->
+	<figure class="itemside mb-4">
+		<div class="aside">	<img class="img-sm" width="80" width="80" src="images/items/4.jpg"> </div>
+		<figcaption class="text-wrap">
+			<p class="title"> The name of product or item could be here </p>
+			<a href="#" class="btn btn-primary btn-sm"> Button </a>
+			<button class="btn btn-sm btn-warning" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+		</figcaption>
+	</figure>  <!-- itemside.// -->
+	<figure class="itemside">
+		<div class="aside">	<img class="img-sm" width="80" width="80" src="images/items/1.jpg"> </div>
+		<figcaption class="text-wrap">
+			<p class="title">Some name of item goes here nice</p>
+			<a href="#" class="btn btn-primary btn-sm"> Button </a>
+			<button class="btn btn-sm btn-warning" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+		</figcaption>
+	</figure>  <!-- itemside.// -->
+</div> <!-- box.// -->
+
+</div> <!-- code-wrap.// -->
+
+</aside> <!-- col.// -->
+</div> <!-- row.// -->
+
+
 <div class="row">
 <aside class="col-md-4">
 <h3  class="subtitle-doc"># itemside image4
@@ -753,15 +858,34 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </p>
 	<a href="#" data-html="code_icontext1" class="showcode">[code]</a>
 </h3>
 <div id="code_icontext1">
-<div class="icontext">
-	<div class="icon-wrap icon-xs bg-secondary round text-light">
-		<i class="fa fa-envelope"></i>
-		<span class="notify">4</span>
-	</div>
-	<div class="text-wrap">
-		<div>Some notification</div>
-	</div>
-</div> <!-- icontext.// -->
+<article class="box">
+	<div class="icontext mb-4">
+		<div class="icon-wrap icon-xs bg-secondary round text-light">
+			<i class="fa fa-user"></i>
+			<span class="notify">4</span>
+		</div>
+		<div class="text-wrap">
+			<div>Some notification</div>
+		</div>
+	</div> <!-- icontext.// -->
+	<div class="icontext  mb-4">
+		<div class="icon-wrap icon-xs bg-primary round text-light">
+			<i class="fa fa-envelope"></i>
+			<span class="notify">1</span>
+		</div>
+		<div class="text-wrap">
+			<div>Some notification</div>
+		</div>
+	</div> <!-- icontext.// -->
+	<div class="icontext">
+		<div class="icon-wrap icon-xs bg-success round text-light">
+			<i class="fa fa-shopping-cart"></i>
+		</div>
+		<div class="text-wrap">
+			<div>Some notification</div>
+		</div>
+	</div> <!-- icontext.// -->
+</article>
 </div> <!-- code-wrap.// -->
 </div> <!-- col.// -->
 <div class="col-md-3">
@@ -769,15 +893,35 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </p>
 	<a href="#" data-html="code_icontext2" class="showcode">[code]</a>
 </h3>
 <div id="code_icontext2">
-<div class="icontext">
-	<div class="icon-wrap icon-xs bg-primary round">
-		<i class="fa fa-check white"></i>
-	</div>
-	<div class="text-wrap">
-		<small class="text-muted">Some heading</small>
-		<div>Just any text here</div>
-	</div>
-</div> <!-- icontext.// -->
+<article class="box">
+	<div class="icontext mb-4">
+		<div class="icon-wrap icon-xs bg-secondary round">
+			<i class="fa fa-check white"></i>
+		</div>
+		<div class="text-wrap">
+			<small class="text-muted">Some heading</small>
+			<div>Just any text here</div>
+		</div>
+	</div> <!-- icontext.// -->
+	<div class="icontext mb-4">
+		<div class="icon-wrap icon-xs bg-primary round">
+			<i class="fa fa-wifi white"></i>
+		</div>
+		<div class="text-wrap">
+			<small class="text-muted">Some heading</small>
+			<div>Just any text here</div>
+		</div>
+	</div> <!-- icontext.// -->
+	<div class="icontext">
+		<div class="icon-wrap icon-xs bg-success round">
+			<i class="fa fa-user white"></i>
+		</div>
+		<div class="text-wrap">
+			<small class="text-muted">Some heading</small>
+			<div>Just any text here</div>
+		</div>
+	</div> <!-- icontext.// -->
+</article> <!-- box.// -->
 </div> <!-- code-wrap.// -->
 </div> <!-- col.// -->
 <div class="col-md-3">
@@ -785,13 +929,22 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </p>
 	<a href="#" data-html="code_icontext3" class="showcode">[code]</a>
 </h3>
 <div id="code_icontext3">
-<div class="icontext">
-	<div class="icon-wrap icon-sm round text-secondary border border-secondary "><i class="fa fa-shopping-cart"></i></div>
-	<div class="text-wrap">
-		<small>Some heading</small>
-		<div class="b">Just any text here</div>
-	</div>
-</div> <!-- icontext.// -->
+<article class="box">
+	<div class="icontext  mb-4">
+		<div class="icon-wrap icon-sm round text-secondary border border-secondary "><i class="fa fa-user"></i></div>
+		<div class="text-wrap">
+			<small>Some heading</small>
+			<div class="b">Just any text here</div>
+		</div>
+	</div> <!-- icontext.// -->
+	<div class="icontext">
+		<div class="icon-wrap icon-sm round text-white bg-primary"><i class="fa fa-shopping-cart"></i></div>
+		<div class="text-wrap">
+			<small>Some heading</small>
+			<div class="b">Just any text here</div>
+		</div>
+	</div> <!-- icontext.// -->
+</article> <!-- box.// -->
 </div> <!-- code-wrap.// -->
 </div> <!-- col.// -->
 <div class="col-md-3">
@@ -799,28 +952,60 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </p>
 	<a href="#" data-html="code_icontext4" class="showcode">[code]</a>
 </h3>
 <div id="code_icontext4">
-<div class="icontext">
-	<div class="icon-wrap"><i class="icon-sm round border border-primary text-primary fa fa-user"></i></div>
-	<div class="text-wrap dropdown">
-		<small>Welcome user</small>
-		<a href="#" class="b" data-toggle="dropdown" data-offset="20,10"> 
-		 	My account <i class="fa fa-caret-down"></i> 
-		</a>
-		<div class="dropdown-menu dropdown-menu-right" style="min-width:250px">
-			<form class="px-4 py-3">
-				<div class="form-group">
-				  <label>Email address</label>
-				  <input class="form-control" placeholder="email@example.com" type="email">
-				</div>
-				<div class="form-group">
-				  <label>Password</label>
-				  <input class="form-control" placeholder="Password" type="password">
-				</div>
-				<button type="submit" class="btn btn-primary">Sign in</button>
-			</form>	
-		</div> <!--  dropdown-menu .// -->
-	</div> <!-- text-wrap.// -->
-</div> <!-- icontext.// -->
+<article class="box">
+	<div class="icontext mb-4">
+		<div class="icon-wrap"><i class="icon-sm round border border-primary text-primary fa fa-user"></i></div>
+		<div class="text-wrap dropdown">
+			<small>Welcome user</small>
+			<a href="#" class="b" data-toggle="dropdown" data-offset="20,10"> 
+			 	My account <i class="fa fa-caret-down"></i> 
+			</a>
+			<div class="dropdown-menu dropdown-menu-right" style="min-width:250px">
+				<form class="px-4 py-3">
+					<div class="form-group">
+					  <label>Email address</label>
+					  <input class="form-control" placeholder="email@example.com" type="email">
+					</div>
+					<div class="form-group">
+					  <label>Password</label>
+					  <input class="form-control" placeholder="Password" type="password">
+					</div>
+					<button type="submit" class="btn btn-primary">Sign in</button>
+				</form>	
+			</div> <!--  dropdown-menu .// -->
+		</div> <!-- text-wrap.// -->
+	</div> <!-- icontext.// -->
+
+	<div class="icontext">
+		<div class="icon-wrap"><i class="icon-sm round bg-primary text-white fa fa-shopping-cart"></i></div>
+		<div class="text-wrap dropdown">
+			<small>Some heading</small>
+			<a href="#" class="b" data-toggle="dropdown" data-offset="20,10"> 
+			 	Another text here  <i class="fa fa-caret-down"></i> 
+			</a>
+			<div class="dropdown-menu dropdown-menu-right" style="min-width: 250px;">
+				<article class="p-2">			
+					<figure class="media">
+						<div class="img-wrap"><img src="images/items/1.jpg" class="img-thumbnail img-xs"></div>
+						<figcaption class="media-body">
+							<a href="#">Product name</a> <br>
+							<span class="text-muted">USD 260</span>
+						</figcaption>
+					</figure> <!-- media.// -->
+					<hr>
+					<figure class="media">
+						<div class="img-wrap"><img src="images/items/2.jpg" class="img-thumbnail img-xs"></div>
+						<figcaption class="media-body">
+							<a href="#">Product name</a> <br>
+							<span class="text-muted">USD 1260</span>
+						</figcaption>
+					</figure> <!-- media.// -->
+				</article>
+			</div> <!--  dropdown-menu .// -->
+		</div> <!-- text-wrap.// -->
+	</div> <!-- icontext.// -->
+</article> <!-- box.// -->
+
 </div> <!-- code-wrap.// -->
 </div> <!-- col.// -->
 </div> <!-- row.// --> 
@@ -1216,14 +1401,14 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </p>
 			<div class="text-wrap">
 				<h4 class="title"> Ut wisi enim ad minim veniam  </h4>
 				<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Ut wisi enim ad minim veniam </p>
-				<p class="rating-wrap my-0">
-					<span class="badge badge-info">132 reviews</span>
-					<span class="badge badge-info">154 orders </span>
+				<p class="rating-wrap my-0 text-muted">
+					<span class="label-rating">132 reviews</span>
+					<span class="label-rating">154 orders </span>
 				</p> <!-- rating-wrap.// -->
 			</div> <!-- text-wrap.// -->
 		</div> <!-- col.// -->
 		<aside class="col-sm-3">
-			<div class="box">
+			<div class="border-left p-4">
 				<div class="price-wrap">
 					<span class="h3 price"> $56 </span><del class="price-old"> $98</del>
 				</div> <!-- info-price-detail // -->
@@ -1245,14 +1430,14 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </p>
 			<div class="text-wrap">
 				<h4 class="title"> Here goes heading of product  </h4>
 				<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Ut wisi enim ad minim veniam </p>
-				<p class="rating-wrap my-0">
-					<span class="badge badge-info">132 reviews</span>
-					<span class="badge badge-info">154 orders </span>
+				<p class="rating-wrap my-0 text-muted">
+					<span class="label-rating">132 reviews</span>
+					<span class="label-rating">154 orders </span>
 				</p> <!-- rating-wrap.// -->
 			</div> <!-- text-wrap.// -->
 		</div> <!-- col.// -->
 		<aside class="col-sm-3">
-			<div class="box">
+			<div class="border-left p-4">
 				<div class="price-wrap">
 					<span class="h3 price"> $56 </span> <del class="price-old"> $98</del>
 				</div> <!-- info-price-detail // -->
@@ -2137,7 +2322,7 @@ tempor incididunt ut labore et dolore magna aliqua. </p>
 </h4>
 <div id="code_cart">
 <div class="card">
-<table class="table table-responsive table-hover shopping-cart-wrap">
+<table class="table table-hover shopping-cart-wrap">
 <thead class="text-muted">
 <tr>
   <th scope="col">Product</th>
@@ -2468,33 +2653,19 @@ tempor incididunt ut labore et dolore magna aliqua. </p>
 </div> <!-- row.// -->
 </section>
 
+<!-- ============ main content inner .end ============ -->
+</div> <!-- main content.// -->
 
-<hr>
-
-
-	</main> <!-- inner main .// -->
-</div><!-- container //  -->
-
-<!-- ========================= SECTION FOOTER ========================= -->
-<footer class="doc-section-footer text-center bg-white pb-3" id="page_footer">
-
-<article class="bg-secondary mb-3 p-5">  
-<blockquote class="blockquote text-center white">
+<article class="bg-secondary p-5">  
+<blockquote class=" text-center white">
   <p class="mb-0">This is not end. We're developing this project daily. <br> Adding new components. Updating, making it more clean &amp semantic</p>
   <p>If You find any issue or want to give any recommendation...  <br> <a href="mailto:vosidiy@gmail.com" class="text-light">... mail me</a> &nbsp  vosidiy@gmail.com </p>
   <footer class="blockquote-footer white">Vosidiy M. <cite title="Source Title">UI Designer and Front-end Developer </cite></footer>
 </blockquote>
 </article>
 
-<div class="text-center">
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="L2B9M6JFF9C2J">
-<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to donate online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-</div>
-<hr>
+<!-- ========================= SECTION FOOTER ========================= -->
+<footer class="doc-section-footer text-center bg-white p-3" id="page_footer">
 
 Copyright &copy 2018 <br>
 <a href="http://bootstrap-ecommerce.com">Bootstrap-ecommerce UI kit</a>
@@ -2502,8 +2673,8 @@ Copyright &copy 2018 <br>
 </footer>
 <!-- ========================= SECTION FOOTER END // ========================= -->
 
-</section>
-<!-- ========================= SECTION CONTENT END// ========================= -->
+</main> <!-- main-wrap .// -->
+</div> <!-- row.// -->
 
 
 
